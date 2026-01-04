@@ -2,6 +2,9 @@ import os
 import sys
 import pymongo
 import certifi
+import logging
+logging.getLogger("pymongo").setLevel(logging.WARNING)
+
 
 from src.exception import MyException
 from src.logger import logger
@@ -35,7 +38,7 @@ class MongoDBClient():
             
             MongoDBClient.client=pymongo.MongoClient(mongo_db_url,tlsCAFile=ca)
             self.client=MongoDBClient.client
-            self.database=self.client(database_name)
+            self.database=self.client[database_name]
             self.database_name=database_name
             logger.info("MongDB connection is successful ")
         except Exception as e:

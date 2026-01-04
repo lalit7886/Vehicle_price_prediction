@@ -1,5 +1,5 @@
 import sys
-import logging
+from logger import logger
 
 def error_message_details(error:Exception,error_details:sys)->str:
     '''
@@ -19,7 +19,8 @@ def error_message_details(error:Exception,error_details:sys)->str:
     file_name=exc_tb.tb_frame.f_code.co_filename
     line_number=exc_tb.tb_lineno
     error_message=f"Error occured in python script [{file_name}] at line number [{line_number}]"
-    logging.error(error_message)
+    logger.error(error_message)
+    return error_message
     
     
 class MyException(Exception):

@@ -13,7 +13,7 @@ class proj1Data:
     def __init__(self):
         'Initialize the mongoDB client connection'
         try:
-            set.mongo_client=MongoDBClient(database_name=DATABASE_NAME)
+            self.mongo_client=MongoDBClient(database_name=DATABASE_NAME)
             
         except Exception as e:
             raise MyException(e,sys)
@@ -27,7 +27,7 @@ class proj1Data:
                 
             else:
                 collection=self.mongo_client[database_name][collection_name]
-                
+   
             print(f"Fetching data from mongoDB")
             df=pd.DataFrame(list(collection.find()))
             
