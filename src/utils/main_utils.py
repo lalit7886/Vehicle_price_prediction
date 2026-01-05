@@ -59,7 +59,7 @@ def load_numpy_array_data(file_path:str)->np.array:
         raise MyException(e,sys) from e
     
     
-def save_obj(file_path:str,obj:object)->None:
+def save_object(file_path:str,obj:object)->None:
     logger.info("Entered the save object method of utilis") 
     
     try:
