@@ -95,7 +95,7 @@ class SimpleStorageService:
         logger.info("Entered upload_file method of Class SimpleStorageService")
         try:
             logger.info(f"Uploading file from path {from_file} to file{to_file} in bucket {bucket_name}")
-            self.s3_resource.client.upload_file(from_file,bucket_name,to_file)
+            self.s3_resource.meta.client.upload_file(from_file,bucket_name,to_file)
             logger.info("Successfully uploaded file")
             
             if remove:

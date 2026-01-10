@@ -44,8 +44,8 @@ class Proj1Estimator:
         :return:
         """
         try:
-            self.s3.upload_file(from_file,
-                                to_filename=self.model_path,
+            self.s3.upload_file(from_file=from_file,
+                                to_file=self.model_path,
                                 bucket_name=self.bucket_name,
                                 remove=remove
                                 )
