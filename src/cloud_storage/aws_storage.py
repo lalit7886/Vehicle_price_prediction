@@ -31,7 +31,7 @@ class SimpleStorageService:
         try:
             func=(
                 lambda:object_name.get()["body"].read().decode()
-                if decode else object_name.get()["body"].read()
+                if decode else object_name.get()["Body"].read()
             )
             
             conv_func=lambda:StringIO(func()) if make_redable else func()
