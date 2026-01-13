@@ -1,9 +1,4 @@
-Perfect 👍
-Below is a **complete, clean, recruiter-ready `README.md`** you can **copy-paste directly** into your GitHub repository.
 
----
-
-````markdown
 # 🚗 Vehicle Price Prediction – End-to-End MLOps Project
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
